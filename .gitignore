@@ -86,6 +86,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Windws executables
+*.exe
+
 
 ####################################################################################
 # macOS .gitignore rules
@@ -117,5 +120,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# Don't allow builds
+# macOS executables
 *.app
