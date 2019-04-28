@@ -5,8 +5,8 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
       // Config parameters
-   [SerializeField] Paddle  paddle;
-   [SerializeField] Vector2 startingVelocity;
+   [SerializeField] Paddle  paddle       = null;
+   [SerializeField] Vector2 initVelocity = new Vector2();
 
       // State
    private Vector2     offset;
@@ -46,7 +46,7 @@ public class Ball : MonoBehaviour
        if (Input.GetMouseButtonDown(0)) {
           m_hasStarted = true;
           m_rigidbody2d.simulated = true;
-          m_rigidbody2d.velocity = startingVelocity;
+          m_rigidbody2d.velocity = initVelocity;
        }
     }
 }
