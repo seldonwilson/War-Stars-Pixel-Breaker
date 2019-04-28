@@ -14,8 +14,6 @@ public class Paddle : MonoBehaviour
       float width = gameObject.GetComponent<Collider2D>().bounds.size.x;
       min = width / 2.0f;
       max = screenWidthUnits - width / 2.0f;
-      Debug.Log("min is: " + min);
-      Debug.Log("max is: " + max);
     }
 
     // Update is called once per frame
