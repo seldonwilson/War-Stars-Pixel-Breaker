@@ -7,6 +7,7 @@ public class LoseCollider : MonoBehaviour
 {
    private void OnTriggerEnter2D(Collider2D collision)
    {
+      Debug.Log("Lose collider detected ball");
       SceneManager.LoadScene("Game Over");
    }
 }
