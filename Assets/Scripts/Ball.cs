@@ -7,6 +7,7 @@ public class Ball : MonoBehaviour
       // Config parameters
    [SerializeField] Paddle  paddle       = null;
    [SerializeField] Vector2 initVelocity = new Vector2();
+   [SerializeField] AudioClip[] ballSounds;
 
       // State
    private Vector2     offset;
@@ -53,7 +54,8 @@ public class Ball : MonoBehaviour
    private void OnCollisionEnter2D(Collision2D collision)
    {
       if (m_hasStarted) {
-         GetComponent<AudioSource>().Play();
+         AudioClip clip = ballSounds[Random.Range(0, ballSounds.Length)];
+         GetComponent<AudioSource>().PlayOneShot(clip);
       }
    }
 }
