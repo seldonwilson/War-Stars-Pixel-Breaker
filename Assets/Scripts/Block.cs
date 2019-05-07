@@ -4,7 +4,16 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-   [SerializeField] AudioClip breakSound;
+   [SerializeField] AudioClip breakSound = null;
+
+      // Cached reference
+   private Level level;
+
+   private void Start()
+   {
+      level = FindObjectOfType<Level>();
+      level.CountBreakableBlocks();
+   }
 
    private void OnCollisionEnter2D(Collision2D collision)
    {
